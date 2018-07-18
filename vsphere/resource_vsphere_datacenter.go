@@ -110,7 +110,7 @@ func resourceVSphereDatacenterCreate(d *schema.ResourceData, meta interface{}) e
 		}
 	}
 
-	d.SetId(name)
+	d.SetId(dc.Reference().Value)
 
 	return resourceVSphereDatacenterRead(d, meta)
 }
